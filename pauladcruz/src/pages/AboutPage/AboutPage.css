@@ -1,0 +1,57 @@
+.about-page {
+    text-align: center;
+  }
+  
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 0.5s ease;
+  }
+  
+  .card-title {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #3e3e3e;
+    transition: transform 0.5s ease;
+  }
+  
+  .card-title.move-up {
+    transform: translateY(-80px);
+  }
+  
+  .card {
+    cursor: pointer;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    position: relative;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    z-index: 10;
+  }
+  
+  .card.active {
+    transform: scale(1.4);
+    z-index: 10;
+  }
+  
+  .card.inactive {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .playing-card {
+    height: 420px;
+  }
+  
+  .card-wrapper.inactive {
+    opacity: 0;
+    pointer-events: none;
+  }

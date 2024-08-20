@@ -1,0 +1,172 @@
+[
+    {
+        "statement_en": "I created this website without using AI.",
+        "statement_sv": "Jag skapade den här hemsidan utan att använda AI.",
+        "answer": false
+    },
+    {
+        "statement_en": "You want to hire me as a consultant.",
+        "statement_sv": "Du vill anlita mig som konsult.",
+        "answer": true
+    },
+    {
+        "statement_en": "I use these questions to brag about myself.",
+        "statement_sv": "Jag använder de här frågorna för att skryta om mig själv.",
+        "answer": true
+    },
+    {
+        "statement_en": "I am a certified Scrum Master.",
+        "statement_sv": "Jag är certifierad Scrum Master.",
+        "answer": true
+    },
+    {
+        "statement_en": "I am certified in web accessibility.",
+        "statement_sv": "Jag är certifierad i webbtillgänglighet.",
+        "answer": true
+    },
+    {
+        "statement_en": "I am available right now.",
+        "statement_sv": "Jag är tillgänglig just nu.",
+        "answer": true
+    },
+    {
+        "statement_en": "I hate dogs.",
+        "statement_sv": "Jag hatar hundar.",
+        "answer": false
+    },
+    {
+        "statement_en": "I play Alliance in World of Warcraft.",
+        "statement_sv": "Jag spelar Allians i World of Warcraft.",
+        "answer": false
+    },
+    {
+        "statement_en": "I love creepy pastas.",
+        "statement_sv": "Jag älskar creepy pastas.",
+        "answer": true
+    },
+    {
+        "statement_en": "I am a frontend developer who specialises in React and TypeScript.",
+        "statement_sv": "Jag är en frontend-utvecklare som specialiserar mig på React och TypeScript.",
+        "answer": true
+    },
+    {
+        "statement_en": "I am based in Edinburgh.",
+        "statement_sv": "Jag utgår ifrån Edinburgh.",
+        "answer": false
+    },
+    {
+        "statement_en": "I have two sons.",
+        "statement_sv": "Jag har två söner.",
+        "answer": false
+    },
+    {
+        "statement_en": "I do not have any experience in TypeScript.",
+        "statement_sv": "Jag har ingen erfarenhet av TypeScript.",
+        "answer": false
+    },
+    {
+        "statement_en": "I speak three languages.",
+        "statement_sv": "Jag talar tre språk.",
+        "answer": true
+    },
+    {
+        "statement_en": "I prefer working alone rather than in a team.",
+        "statement_sv": "Jag föredrar att arbeta ensam snarare än i ett team.",
+        "answer": false
+    },
+    {
+        "statement_en": "I have no interest in entrepreneurship.",
+        "statement_sv": "Jag har inget intresse för entreprenörskap.",
+        "answer": false
+    },
+    {
+        "statement_en": "I have experience working with international clients.",
+        "statement_sv": "Jag har erfarenhet av att arbeta med internationella kunder.",
+        "answer": true
+    },
+    {
+        "statement_en": "My favorite programming language is Python.",
+        "statement_sv": "Mitt favoritprogrammeringsspråk är Python.",
+        "answer": false
+    },
+    {
+        "statement_en": "I am a big fan of coffee.",
+        "statement_sv": "Jag är ett stort fan av kaffe.",
+        "answer": true
+    },
+    {
+        "statement_en": "I have never worked with backend development.",
+        "statement_sv": "Jag har aldrig arbetat med backend-utveckling.",
+        "answer": false
+    },
+    {
+        "statement_en": "I have a degree in Computer Science.",
+        "statement_sv": "Jag har en examen i datavetenskap.",
+        "answer": true
+    },
+    {
+        "statement_en": "I have lived abroad.",
+        "statement_sv": "Jag har bott utomlands.",
+        "answer": true
+    },
+    {
+        "statement_en": "I was a guest speaker on a podcast to highlight the importance of representative role models in the tech industry.",
+        "statement_sv": "Jag gästade en podcast för att prata om vikten av representativa förebilder inom IT-branschen.",
+        "answer": true
+    },
+    {
+        "statement_en": "I have experience with cloud platforms such as Microsoft Azure.",
+        "statement_sv": "Jag har erfarenhet av molnplattformar som Microsoft Azure.",
+        "answer": true
+    },
+    {
+        "statement_en": "I dislike participating in public speaking events.",
+        "statement_sv": "Jag tycker inte om prata inför publik.",
+        "answer": false
+    },
+    {
+        "statement_en": "I have talked about web accessibility at a B3 Tech Talk.",
+        "statement_sv": "Jag har presenterat om webbtillgänglighet på B3 Tech Talk.",
+        "answer": true
+    },
+    {
+        "statement_en": "I have never traveled outside of Europe.",
+        "statement_sv": "Jag har aldrig rest utanför Europa.",
+        "answer": false
+    },
+    {
+        "statement_en": "I have been a mentor and coach for students at Changer's Hub.",
+        "statement_sv": "Jag har varit mentor och coach för studenter på Changer's Hub.",
+        "answer": true
+    },
+    {
+        "statement_en": "I am not certified as a SAFe Practitioner.",
+        "statement_sv": "Jag är inte certifierad inom SAFe.",
+        "answer": false
+    },
+    {
+        "statement_en": "I have only worked with small startups.",
+        "statement_sv": "Jag har bara arbetat med små startups.",
+        "answer": false
+    },
+    {
+        "statement_en": "I only know one programming language.",
+        "statement_sv": "Jag kan bara ett programmeringsspråk.",
+        "answer": false
+    },
+    {
+        "statement_en": "I am self taught.",
+        "statement_sv": "Jag är självlärd.",
+        "answer": false
+    },
+    {
+        "statement_en": "I wrote my first lines of code at the age of 10 on hogwarts.nu.",
+        "statement_sv": "Jag skrev mina första rader kod som 10-åring på hogwarts.nu.",
+        "answer": true
+    },
+    {
+        "statement_en": "I have never been involved in project management.",
+        "statement_sv": "Jag har aldrig varit involverad i projektledning.",
+        "answer": false
+    }
+]

@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { LanguageProvider } from './contexts/LanguageContext';
+import HomePage from './pages/HomePage/HomePage';
 import './App.css';
+import PhaserGame from './games/PhaserGame';
+import Header from './components/Header/Header';
+import AboutPage from './pages/AboutPage/AboutPage';
+import useKonamiCode from './hooks/useKonamiCode';
+import KonamiPopup from './components/Popups/KonamiPopup/KonamiPopup';
+import Footer from './components/Footer/Footer';
 
-function App() {
+const App: React.FC = () => {
+  const [konamiTriggered, setKonamiTriggered] = useState(false);
+
+  useKonamiCode(() => {
+    setKonamiTriggered(true);
+  });
+
+  const closePopup = () => {
+    setKonamiTriggered(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <LanguageProvider>
+      <Router>
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+          </Routes>
+        </main>
+        <PhaserGame />
+        {konamiTriggered && <KonamiPopup onClose={closePopup} />}
+        <Footer />
+      </Router>
+    </LanguageProvider>
   );
-}
+};
 
 export default App;
