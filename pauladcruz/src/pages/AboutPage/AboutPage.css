@@ -5,53 +5,81 @@
   .cards-container {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 80px;
   }
   
   .card-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: opacity 0.5s ease;
   }
   
   .card-title {
     margin-bottom: 10px;
     font-size: 1.5rem;
-    color: #3e3e3e;
-    transition: transform 0.5s ease;
-  }
-  
-  .card-title.move-up {
-    transform: translateY(-80px);
+    color: var(--dark-purple);
   }
   
   .card {
+    width: 300px;
+    height: 420px;
+    perspective: 1000px;
+  }
+  
+  .card-front:hover {
+    transform: scale(1.03);
     cursor: pointer;
-    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .card-inner {
     position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
   }
   
-  .card:hover {
-    transform: scale(1.05);
-    z-index: 10;
+  .card.flipped .card-inner {
+    transform: rotateY(180deg);
   }
   
-  .card.active {
-    transform: scale(1.4);
-    z-index: 10;
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 16px;
   }
   
-  .card.inactive {
-    opacity: 0;
-    pointer-events: none;
+  .card-front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    transition: transform 0.5s ease;
+  }
+  
+  .card-back {
+    z-index: 1;
+    transform: scale(1.03);
+    border: 8px solid var(--soft-peach);
+    transform: rotateY(180deg);
+    background-color: var(--light-pink);
   }
   
   .playing-card {
-    height: 420px;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
   }
   
-  .card-wrapper.inactive {
-    opacity: 0;
-    pointer-events: none;
+  .exit-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    cursor: pointer;
   }
+  

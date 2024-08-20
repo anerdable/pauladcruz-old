@@ -48,21 +48,17 @@ const TrueFalseGame: React.FC = () => {
     <div className="true-false-game">
       {!gameOver ? (
         <div className="game-content">
-          <button
-            onClick={() => handleAnswer(true)}
-            className="true-button casino-button"
-          >
-            {t.true}
-          </button>
           <div className="question-container">
             <h2 className="question">{getStatement(questions[currentQuestion])}</h2>
           </div>
-          <button
-            onClick={() => handleAnswer(false)}
-            className="false-button casino-button"
-          >
-             {t.false}
-          </button>
+          <div className="button-container">
+            <button onClick={() => handleAnswer(true)} className="true-button">
+              {t.true}
+            </button>
+            <button onClick={() => handleAnswer(false)} className="false-button">
+              {t.false}
+            </button>
+          </div>
         </div>
       ) : (
         <div className="game-over-container">
@@ -70,12 +66,11 @@ const TrueFalseGame: React.FC = () => {
           <div className="final-score">
             {`${translations[language].finalScore} ${score}/${questions.length}`}
           </div>
-          <button
-            onClick={startGame}
-            className="play-again-button"
-          >
-            {translations[language].playAgain}
-          </button>
+          <div className="button-container">
+            <button onClick={startGame} className="play-again-button">
+              {translations[language].playAgain}
+            </button>
+          </div>
         </div>
       )}
     </div>

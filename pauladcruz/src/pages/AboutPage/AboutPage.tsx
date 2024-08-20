@@ -12,9 +12,9 @@ const AboutPage: React.FC = () => {
 
   const handleCardClick = (index: number) => {
     if (activeCard === index) {
-      setActiveCard(null);
+      setActiveCard(null); 
     } else {
-      setActiveCard(index);
+      setActiveCard(index); 
     }
   };
 
@@ -24,19 +24,21 @@ const AboutPage: React.FC = () => {
         {[t.game1Title, t.trueFalseGameTitle, t.game3Title].map((title, index) => (
           <div
             key={index}
-            className={`card-wrapper ${activeCard === index ? 'active' : activeCard !== null ? 'inactive' : ''}`}
+            className={`card-wrapper ${activeCard === index ? 'active' : ''}`}
           >
-            <h2 className={`card-title ${activeCard === index ? 'move-up' : ''}`}>{title}</h2>
+            <h2 className='card-title'>{title}</h2>
             <div
-              className={`card ${activeCard === index ? 'active' : activeCard !== null ? 'inactive' : ''}`}
-              onClick={() => handleCardClick(index)}
+              className={`card ${activeCard === index ? 'flipped' : ''}`}
             >
-              <img src={playingcard} alt="PlayingCard" className="playing-card" />
-              {activeCard === 1 && index === 1 && (
-                  <div className="card-back">
-                    <TrueFalseGame />
-                  </div>
-                )}
+              <div className="card-inner">
+                <div className="card-front" onClick={() => handleCardClick(index)}>
+                  <img src={playingcard} alt="PlayingCard" className="playing-card" />
+                </div>
+                <div className="card-back">
+                  {activeCard === 1 && index === 1 && <TrueFalseGame />}
+                  <div className="exit-area" onClick={() => handleCardClick(index)}></div>
+                </div>
+              </div>
             </div>
           </div>
         ))}

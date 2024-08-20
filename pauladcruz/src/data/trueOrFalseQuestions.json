@@ -45,7 +45,7 @@
         "answer": true
     },
     {
-        "statement_en": "I am a frontend developer who specialises in React and TypeScript.",
+        "statement_en": "I'm a frontend developer who specialises in React and TypeScript.",
         "statement_sv": "Jag är en frontend-utvecklare som specialiserar mig på React och TypeScript.",
         "answer": true
     },
@@ -55,12 +55,7 @@
         "answer": false
     },
     {
-        "statement_en": "I have two sons.",
-        "statement_sv": "Jag har två söner.",
-        "answer": false
-    },
-    {
-        "statement_en": "I do not have any experience in TypeScript.",
+        "statement_en": "I don't have any experience in TypeScript.",
         "statement_sv": "Jag har ingen erfarenhet av TypeScript.",
         "answer": false
     },
@@ -86,13 +81,8 @@
     },
     {
         "statement_en": "My favorite programming language is Python.",
-        "statement_sv": "Mitt favoritprogrammeringsspråk är Python.",
+        "statement_sv": "Mitt bästa programmeringsspråk är Python.",
         "answer": false
-    },
-    {
-        "statement_en": "I am a big fan of coffee.",
-        "statement_sv": "Jag är ett stort fan av kaffe.",
-        "answer": true
     },
     {
         "statement_en": "I have never worked with backend development.",
@@ -117,16 +107,6 @@
     {
         "statement_en": "I have experience with cloud platforms such as Microsoft Azure.",
         "statement_sv": "Jag har erfarenhet av molnplattformar som Microsoft Azure.",
-        "answer": true
-    },
-    {
-        "statement_en": "I dislike participating in public speaking events.",
-        "statement_sv": "Jag tycker inte om prata inför publik.",
-        "answer": false
-    },
-    {
-        "statement_en": "I have talked about web accessibility at a B3 Tech Talk.",
-        "statement_sv": "Jag har presenterat om webbtillgänglighet på B3 Tech Talk.",
         "answer": true
     },
     {
