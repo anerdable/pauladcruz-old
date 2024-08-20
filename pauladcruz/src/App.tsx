@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { LanguageProvider } from './contexts/LanguageContext';
 import HomePage from './pages/HomePage/HomePage';
 import './App.css';
@@ -9,6 +9,17 @@ import AboutPage from './pages/AboutPage/AboutPage';
 import useKonamiCode from './hooks/useKonamiCode';
 import KonamiPopup from './components/Popups/KonamiPopup/KonamiPopup';
 import Footer from './components/Footer/Footer';
+
+const MainContent: React.FC = () => {
+  return (
+    <main>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+    </main>
+  );
+};
 
 const App: React.FC = () => {
   const [konamiTriggered, setKonamiTriggered] = useState(false);
@@ -25,12 +36,7 @@ const App: React.FC = () => {
     <LanguageProvider>
       <Router>
         <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-          </Routes>
-        </main>
+        <MainContent />
         <PhaserGame />
         {konamiTriggered && <KonamiPopup onClose={closePopup} />}
         <Footer />
