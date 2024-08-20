@@ -9,6 +9,8 @@ const TrueFalseGame: React.FC = () => {
   const [currentQuestion, setCurrentQuestion] = useState<number>(0);
   const [questions, setQuestions] = useState<any[]>([]);
   const [gameOver, setGameOver] = useState<boolean>(false);
+  const [feedback, setFeedback] = useState<'shake' | 'correct' | null>(null);
+  const [pressedButton, setPressedButton] = useState<'true' | 'false' | null>(null);
   const { language } = useContext(LanguageContext);
   const t = translations[language];
 
@@ -29,15 +31,24 @@ const TrueFalseGame: React.FC = () => {
   };
 
   const handleAnswer = (answer: boolean) => {
-    if (questions[currentQuestion].answer === answer) {
+    const isCorrect = questions[currentQuestion].answer === answer;
+
+    setPressedButton(answer ? 'true' : 'false');
+    setFeedback(isCorrect ? 'correct' : 'shake');
+
+    if (isCorrect) {
       setScore(prevScore => prevScore + 1);
     }
 
-    if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(prev => prev + 1);
-    } else {
-      setGameOver(true);
-    }
+    setTimeout(() => {
+      if (currentQuestion < questions.length - 1) {
+        setCurrentQuestion(prev => prev + 1);
+      } else {
+        setGameOver(true);
+      }
+      setFeedback(null);
+      setPressedButton(null);
+    }, 500);
   };
 
   if (questions.length === 0) {
@@ -52,10 +63,16 @@ const TrueFalseGame: React.FC = () => {
             <h2 className="question">{getStatement(questions[currentQuestion])}</h2>
           </div>
           <div className="button-container">
-            <button onClick={() => handleAnswer(true)} className="true-button">
+            <button
+              onClick={() => handleAnswer(true)}
+              className={`true-button ${pressedButton === 'true' ? feedback : ''}`}
+            >
               {t.true}
             </button>
-            <button onClick={() => handleAnswer(false)} className="false-button">
+            <button
+              onClick={() => handleAnswer(false)}
+              className={`false-button ${pressedButton === 'false' ? feedback : ''}`}
+            >
               {t.false}
             </button>
           </div>
