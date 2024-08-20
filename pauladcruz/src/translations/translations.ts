@@ -10,7 +10,7 @@ type TranslationsMap = {
 
 export const translations: TranslationsMap = {
     en: {
-      welcome: "HI!",
+      welcome: "HI! Don't waste your time here, check the About page!",
       home: "Home",
       about: "About",
       gameOverMessage: "Okay, if you really want to get to know me better I think at this point we should meet up for a coffee!",
@@ -25,7 +25,7 @@ export const translations: TranslationsMap = {
       game3Title: "idk here either lol"
     },
     sv: {
-      welcome: "HEJ!",
+      welcome: "HEJ! Slösa inte bort tiden här, spana in Om-sidan!",
       home: "Hem",
       about: "Om",
       gameOverMessage: "Okej, om du verkligen vill lära känna mig bättre tycker jag att vi borde träffas på en kaffe vid det här laget!",

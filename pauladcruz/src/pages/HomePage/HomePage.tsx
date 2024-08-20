@@ -8,7 +8,7 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="homepage">
-      <h1>{translations[language].welcome}</h1>
+      <h2>{translations[language].welcome}</h2>
     </div>
   );
 };
