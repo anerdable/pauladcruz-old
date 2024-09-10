@@ -1,0 +1,134 @@
+.square-button {
+    border: 8px solid var(--soft-peach);
+    background-color: transparent;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .heart-button {
+    background-color: transparent;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+  }
+  
+  .heart-button:before,
+  .heart-button:after {
+    content: "";
+    position: absolute;
+    width: 42px;
+    height: 72px;
+    border: 8px solid var(--soft-peach);
+    border-radius: 50px 50px 0 0;
+    background-color: transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .heart-button:before {
+    left: 40px;
+    top: 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+  
+  .heart-button:after {
+    right: 60px;
+    top: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+  
+  .timeline-page {
+    position: relative;
+    text-align: center;
+    padding-top: 10vh;
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .timeline-container {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+  }
+  
+  .fun-timeline,
+  .boring-timeline {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .squiggly-line {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: no-repeat;
+    background-size: contain;
+  }
+  
+  .vertical-line {
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: black;
+  }
+  
+  .event-item {
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    text-align: left;
+    width: auto;
+    transition: background-color 0.3s;
+  }
+  
+  .event-item:focus {
+    outline: 2px solid blue; /* Visual indicator for keyboard focus */
+  }
+  
+  .event-item.mission {
+    color: #333;
+  }
+  
+  .event-item.certification {
+    color: gold;
+  }
+  
+  .event-item.publication {
+    color: #007bff;
+  }
+  
+  .event-item:hover {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  
+  .event-details {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+  }
+  

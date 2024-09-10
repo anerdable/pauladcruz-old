@@ -1,0 +1,29 @@
+.arrow-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 350px; /* Adjusted width for more space */
+    margin: 50px auto;
+  }
+  
+  .squiggly-arrow {
+    position: absolute;
+  }
+  
+  .arrow-path {
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    animation: drawArrow 1.5s ease forwards infinite;
+  }
+  
+  @keyframes drawArrow {
+    0% {
+      stroke-dashoffset: 600;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  

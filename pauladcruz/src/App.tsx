@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { LanguageProvider } from './contexts/LanguageContext';
 import HomePage from './pages/HomePage/HomePage';
+import TimelinePage from './pages/TimelinePage/TimelinePage';
 import './App.css';
 import PhaserGame from './games/PhaserGame';
 import Header from './components/Header/Header';
@@ -16,6 +17,7 @@ const MainContent: React.FC = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
+        {/* <Route path="/timeline" element={<TimelinePage />} /> */}
       </Routes>
     </main>
   );

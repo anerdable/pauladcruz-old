@@ -28,6 +28,9 @@ const Header: React.FC = () => {
           <li className={isActive('/about') ? 'active' : ''}>
             <Link to="/about">{translations[language].about}</Link>
           </li>
+          {/* <li className={isActive('/timeline') ? 'active' : ''}>
+            <Link to="/timeline">{translations[language].timeline}</Link>
+          </li> */}
         </ul>
       </nav>
       <LanguageSwitcher />
